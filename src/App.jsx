@@ -45,7 +45,7 @@ const App = () => {
   return (
     <>
       <h1 style={center_x_margin}>Local Weather</h1>
-      <section style={center_x_margin}>
+      <section style={{marginInline: "60px", flexWrap: "wrap", display: "flex"}}>
         {weatherForecasts.map((weather) => (
           <div
             style={{
@@ -58,6 +58,8 @@ const App = () => {
           >
             {/* day */}
             <h2>{weather.day}</h2>
+
+            <img src={weather.img}></img>
 
             {/* conditions */}
             <div style={item_style}>
